@@ -16,7 +16,7 @@
 		
 	  
 	  use class_NanoTube
-	  use CreateNanoTubeFromInput
+	  use InputTube
 	  use Solvers
 	  use TubeBuilder
 	  use OutputBuilder
