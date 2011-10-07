@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{5E53CCA8-D880-4964-8B8C-B3DB057578E7}") = "tubeXYZ", "tubeXYZ\tubeXYZ.pvfproj", "{B4ACC74D-7AAF-4CE9-BA7E-94B53422207A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4ACC74D-7AAF-4CE9-BA7E-94B53422207A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B4ACC74D-7AAF-4CE9-BA7E-94B53422207A}.Debug|Win32.Build.0 = Debug|Win32
+		{B4ACC74D-7AAF-4CE9-BA7E-94B53422207A}.Release|Win32.ActiveCfg = Release|Win32
+		{B4ACC74D-7AAF-4CE9-BA7E-94B53422207A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
