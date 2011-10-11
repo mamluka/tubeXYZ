@@ -10,60 +10,57 @@
 !  Numerical Recipes in Fortran 77 - The Art of Scientific Computing - Second Edition/Volume 1
 
 
-	
+    
 
-	  program prog_tubeXYZ
-		
-	  
-	  use class_NanoTube
-	  use InputTube
-	  use Solvers
-	  use TubeBuilder
-	  use OutputBuilder
-	  use class_NanoTubeContainer
-	  implicit none
+      program prog_tubeXYZ
+      
+      use class_NanoTube
+      use InputTube
+      use Solvers
+      use TubeBuilder
+      use OutputBuilder
+      use class_NanoTubeContainer
+      implicit none
 
-	  
+      
 
-	  ! Variables
-	  
-	  real  :: sigma
-	  character (len=200) :: fileName
-	  integer :: tubeTotal,tubeIndex
-	  type (NanoTube) :: tube
+      ! Variables
+      
+      real  :: sigma
+      character (len=200) :: fileName
+      integer :: tubeTotal,tubeIndex
+      type (NanoTube) :: tube
 
-	  type (NanoTubeContainer) , allocatable :: tubeContainers(:)
-	  type (NanoTubeContainer) :: currentTubeContainer
+      type (NanoTubeContainer) , allocatable :: tubeContainers(:)
+      type (NanoTubeContainer) :: currentTubeContainer
 
-	  ! Body
-	  call Welcome()
-	  tubeTotal = HowManyNanoTubes()
+      ! Body
+      call Welcome()
+      tubeTotal = HowManyNanoTubes()
 
-	  allocate (tubeContainers(tubeTotal))
+      allocate (tubeContainers(tubeTotal))
 
-	  do tubeIndex=1,tubeTotal
-		tube = EnterTube()
-		currentTubeContainer = make_NanoTubeContainer(tube)
+      do tubeIndex=1,tubeTotal
+        tube = EnterTube()
+        currentTubeContainer = make_NanoTubeContainer(tube)
 
-		call GetAtomsXYZByTube(currentTubeContainer%tube,currentTubeContainer%xyz)
-		tubeContainers(tubeIndex) = currentTubeContainer
+        call GetAtomsXYZByTube(currentTubeContainer%tube,currentTubeContainer%xyz)
+        tubeContainers(tubeIndex) = currentTubeContainer
 
-	  end do
+      end do
 
-	  
+      
 
-	 fileName = ChooseWhatKindOfFileToOutput()
+     fileName = ChooseWhatKindOfFileToOutput()
 
-	 call WriteToFile(tubeContainers,fileName)
-
-	  
-	  
+     call WriteToFile(tubeContainers,fileName)
 
 
-	  end program prog_tubeXYZ
 
-	  
+     end program prog_tubeXYZ
 
-	  
+      
 
-	  
+      
+
+      
